@@ -1,25 +1,30 @@
 {
-  "name": "feedback-app",
-  "private": true,
-  "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "framer-motion": "^6.3.11",
-    "prop-types": "^15.8.1",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-icons": "^4.4.0",
-    "react-router-dom": "^6.3.0",
-    "uuid": "^8.3.2"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "@vitejs/plugin-react": "^1.3.0",
-    "vite": "^2.9.9"
-  }
+	"name": "feedback-app",
+	"private": true,
+	"proxy": "http://localhost:5000",
+	"version": "0.0.0",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"server": "json-server --watch db.json --port 5000",
+		"start": "concurrently \"yarn dev\" \"yarn server\""
+	},
+	"dependencies": {
+		"concurrently": "^7.2.2",
+		"framer-motion": "^6.3.11",
+		"json-server": "^0.17.0",
+		"prop-types": "^15.8.1",
+		"react": "^18.0.0",
+		"react-dom": "^18.0.0",
+		"react-icons": "^4.4.0",
+		"react-router-dom": "^6.3.0",
+		"uuid": "^8.3.2"
+	},
+	"devDependencies": {
+		"@types/react": "^18.0.0",
+		"@types/react-dom": "^18.0.0",
+		"@vitejs/plugin-react": "^1.3.0",
+		"vite": "^2.9.9"
+	}
 }
